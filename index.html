@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge</title>
+  </head>
+  <body>
+    <div style="width: 800px; margin: 0 auto">
+      <h1 class="title">Exponential Function Approximation</h1>
+
+      <p>
+        Exponential functions are of great importance in mathematics, physics
+        and engineering. One of the most important functions is . It has the
+        very important property that it is the only function that its derivative
+        is the same as itself. So any process where the rate of change of a
+        quantity is proportional to the quantity itself will be described by
+        exponential functions. Finance, population growth, oscillators all have
+        these characteristics. When we want to model these processes in a
+        computer we have a problem. is irrational and that means that we have to
+        calculate approximate values. Specially our digital computers only know
+        how to solve simple operations... so how can we calculate the value of
+        complex equations? The answer is to simplify the functions into
+        operations a computer can manage without any problem. sums,
+        multiplications and divisions are simple enough. Let’s use the following
+        formula to estimate the value of e up to 9 decimals only using
+        multiplications and sums.
+      </p>
+
+      <img class="formula" src="./formula.png" alt="formula" />
+
+      <p>
+        As you can see is only raised to integer powers (i.e. multiplications)
+        and stands for factorial, which is the integer multiplication up to n
+        (note that 0! and 1! is equal to 1).
+      </p>
+
+      <ol>
+        <li>
+          <p>
+            Build a program that given and would approximate using the identity
+            above. That is only using sums, multiplications and divisions
+            (exponentials are not allowed by definition). You can use any
+            programing language you like (it could be excel if you want).
+          </p>
+        </li>
+        <li>
+          <p>
+            What should be the value of n in order to approximate e<sup>1</sup>
+            up to 9 decimals?
+          </p>
+        </li>
+      </ol>
+
+      <h4>Solution 1</h4>
+
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+        "
+      >
+        <label for="x">X</label>
+        <input name="x" id="x" type="text" />
+
+        <label for="n">N</label>
+        <input name="n" id="n" type="text" />
+        <button class="result-button">Compute Approximation</button>
+      </div>
+
+      <div class="result"></div>
+
+      <h4>Solution 2</h4>
+
+      <div class="result2"></div>
+    </div>
+
+    <script src="./solution.js"></script>
+  </body>
+</html>
